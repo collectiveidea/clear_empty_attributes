@@ -3,7 +3,7 @@ class ActiveRecord::Base
 protected
   def clear_empty_attrs
     @attributes.each do |key,value|
-      self[key] = nil if value.blank?
+      self[key] = nil if value.is_a?(String) && value.blank?
     end
   end
 end
