@@ -1,3 +1,0 @@
-When AR objects are saved from a form, empty fields are saved as empty strings instead of nil.  This kills most validations.
-
-This plugin simple defines a before_validation callback that sets empty attributes to nil.
