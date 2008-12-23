@@ -12,9 +12,17 @@ Solution
 ========
 Defines a AR `before_validation` that sets empty Strings to nil.
 
+Install
+=======
+    script/plugin install git://github.com/grosser/clear_empty_attributes.git
+OR
+    sudo gem install grosser-clear_empty_attributes
+
+
 Migration
 =========
 When you are switching to `clear_empty_attributes`, run this task
 to remove any `''` strings/texts from your database.
 
     rake clear_empty_attributes:clear_all_blank_strings MODELS=User,Movie,...
+(only works when checked out or installed as plugin)
