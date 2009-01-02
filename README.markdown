@@ -15,7 +15,7 @@ Defines a AR `before_validation` that sets empty Strings to nil.
 Install
 =======
     script/plugin install git://github.com/grosser/clear_empty_attributes.git
-OR
+OR  
     sudo gem install grosser-clear_empty_attributes
 
 

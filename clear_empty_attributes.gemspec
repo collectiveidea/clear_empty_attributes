@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael Grosser"]
-  s.date = %q{2008-12-23}
+  s.date = %q{2009-01-02}
   s.description = %q{Save empty strings as nil to avoid lots of problems}
   s.email = %q{grosser.michael@gmail.com}
   s.extra_rdoc_files = ["lib/clear_empty_attributes.rb", "README.markdown", "tasks/clear_empty_attributes.rake"]
