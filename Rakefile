@@ -1,8 +1,18 @@
 require 'rubygems'
 require 'echoe'
 
-porject_name = 'clear_empty_attributes'
+desc 'Default: run spec.'
+task :default => :spec
 
+desc "Run all specs in spec directory"
+task :spec do |t|
+  options = "--colour --format progress --loadby --reverse"
+  files = FileList['spec/**/*_spec.rb']
+  system("spec #{options} #{files}")
+end
+
+#Gemspec
+porject_name = 'clear_empty_attributes'
 Echoe.new(porject_name , '0.1') do |p|
   p.description    = "Save empty strings as nil to avoid lots of problems"
   p.url            = "http://github.com/grosser/#{porject_name}"

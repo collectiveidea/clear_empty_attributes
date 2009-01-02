@@ -26,3 +26,7 @@ to remove any `''` strings/texts from your database.
 
     rake clear_empty_attributes:clear_all_blank_strings MODELS=User,Movie,...
 (only works when checked out or installed as plugin)
+
+TODO
+====
+Should work with update_attribute / write_attribute too
