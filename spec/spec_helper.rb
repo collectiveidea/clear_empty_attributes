@@ -2,6 +2,7 @@
 require 'rubygems'
 require 'spec'
 require 'mocha'
+require 'activerecord'
 
 $LOAD_PATH << File.expand_path("../lib", File.dirname(__FILE__))
 
@@ -22,20 +23,6 @@ module Test
     end
   end
 end
-
-
-# ---- load active record
-require 'active_record'
-
-
-RAILS_ENV = "test"
-ActiveRecord::Base.configurations = {"test" => {
-  :adapter => "sqlite3",
-  :database => ":memory:",
-}.with_indifferent_access}
-
-ActiveRecord::Base.logger = Logger.new(File.directory?("log") ? "log/#{RAILS_ENV}.log" : "/dev/null")
-ActiveRecord::Base.establish_connection(:test)
 
 
 # ---- setup environment/plugin

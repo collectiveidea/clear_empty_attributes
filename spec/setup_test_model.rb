@@ -1,5 +1,9 @@
 require 'rubygems'
-require 'active_record'
+
+#instant database with acts_as_fu http://github.com/nakajima/acts_as_fu
+require 'acts_as_fu'
+include ActsAsFu
+connect!
 
 #create model table
 ActiveRecord::Schema.define(:version => 1) do
