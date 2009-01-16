@@ -24,7 +24,7 @@ Migration
 When you are switching to `clear_empty_attributes`, run this task
 to remove any `''` strings/texts from your database.
 
-    rake clear_empty_attributes:clear_all_blank_strings MODELS=User,Movie,...
+    rake db:clear_empty_attributes
 (only works when checked out or installed as plugin)
 
 TODO
