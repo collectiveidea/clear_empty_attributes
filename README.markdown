@@ -6,17 +6,17 @@ When AR objects are saved, empty fields are saved as '' instead of nil.
  - Makes the use of `unless field.blank?` necessary (opposed to only `if field`)
  - Can lead to late-detected bugs because most of the time strings were `filled or ''` and suddenly they are `nil`
  - Some validations do not support `:allow_blank=>true`
- - Datebases can handle `NULL` better & faster than `''` (especially when using `LIKE`)
+ - Databases can handle `NULL` better & faster than empty strings (especially when using `LIKE`)
 
 Solution
 ========
-Defines a AR `before_validation` that sets empty Strings to nil.
+Defines an AR `before_validation` that sets empty Strings to nil.
 
 Install
 =======
-`script/plugin install git://github.com/grosser/clear_empty_attributes.git`  
+`script/plugin install git://github.com/collectiveidea/clear_empty_attributes.git`  
 OR  
-`sudo gem install grosser-clear_empty_attributes`  
+`sudo gem install collectiveidea-clear_empty_attributes`  
 
 
 Migration
