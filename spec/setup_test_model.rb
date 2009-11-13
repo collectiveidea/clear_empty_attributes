@@ -1,11 +1,12 @@
-require 'rubygems'
+# connect
+ActiveRecord::Base.configurations = {"test" => {
+  :adapter => "sqlite3",
+  :database => ":memory:",
+}.with_indifferent_access}
 
-#instant database with acts_as_fu http://github.com/nakajima/acts_as_fu
-require 'acts_as_fu'
-include ActsAsFu
-connect!
+ActiveRecord::Base.establish_connection(:test)
 
-#create model table
+# create table
 ActiveRecord::Schema.define(:version => 1) do
   create_table :users do |t|
     t.string    :name
@@ -15,7 +16,7 @@ ActiveRecord::Schema.define(:version => 1) do
   end
 end
 
-#create model
+# create model
 class User < ActiveRecord::Base
   validates_length_of :name, :within=>2..20, :allow_nil=>true
 end

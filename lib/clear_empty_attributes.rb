@@ -1,3 +1,5 @@
+require 'activerecord'
+
 class ActiveRecord::Base
   before_validation :clear_empty_attrs
 protected
