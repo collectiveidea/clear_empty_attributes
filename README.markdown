@@ -16,9 +16,9 @@ Defines an AR `before_validation` that sets empty Strings to nil.
 
 Install
 =======
-`script/plugin install git://github.com/collectiveidea/clear_empty_attributes.git`  
+` script/plugin install git://github.com/collectiveidea/clear_empty_attributes.git `
 OR  
-`sudo gem install collectiveidea-clear_empty_attributes`  
+` sudo gem install clear_empty_attributes -s http://gemcutter.org `
 
 
 Migration

@@ -14,7 +14,10 @@ begin
     gem.email = "brandon@opensoul.org"
     gem.homepage = "http://github.com/grosser/#{project_name}"
     gem.authors = ["Brandon Keepers"]
+    gem.add_dependency ['activerecord']
   end
+
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler, or one of its dependencies, is not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end

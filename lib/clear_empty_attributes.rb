@@ -1,6 +1,7 @@
 require 'activerecord'
 
 class ActiveRecord::Base
+
   before_validation :clear_empty_attrs
   before_save :clear_empty_attrs # needed to work correctly with update_attribute too
 
