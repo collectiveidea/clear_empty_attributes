@@ -12,7 +12,7 @@ begin
     gem.name = project_name
     gem.description = gem.summary = "Save empty strings as nil to avoid lots of problems"
     gem.email = "brandon@opensoul.org"
-    gem.homepage = "http://github.com/grosser/#{project_name}"
+    gem.homepage = "http://github.com/collectiveidea/#{project_name}"
     gem.authors = ["Brandon Keepers"]
     gem.add_dependency ['activerecord']
   end
