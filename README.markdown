@@ -8,9 +8,11 @@ When AR objects are saved, empty fields are saved as '' instead of nil.
  - Some validations do not support `:allow_blank=>true`
  - Databases can handle `NULL` better & faster than empty strings (especially when using `LIKE`)
 
+
 Solution
 ========
 Defines an AR `before_validation` that sets empty Strings to nil.
+
 
 Install
 =======
@@ -27,6 +29,10 @@ to remove any `''` strings/texts from your database.
     rake db:clear_empty_attributes
 (only works when checked out or installed as plugin)
 
-TODO
-====
-Should work with update_attribute / write_attribute too
+
+Authors
+=======
+ - [Brandon Keepers](http://opensoul.org)
+ - [Michael Grosser](http://pragmatig.wordpress.com)
+
+Hereby placed under public domain, do what you want, just do not hold anybody accountable...
