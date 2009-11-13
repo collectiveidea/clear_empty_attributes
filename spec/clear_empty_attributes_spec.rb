@@ -56,7 +56,6 @@ describe :clear_empty_attributes do
     end
 
     it "stores strings as nil" do
-      pending
       @user.update_attribute(:name,'')
       @user.reload.name.should == nil
     end
@@ -75,7 +74,6 @@ describe :clear_empty_attributes do
     end
 
     it "stores strings as nil" do
-      pending
       @user.write_attribute(:name,'')
       @user.save!
       @user.reload.name.should == nil
