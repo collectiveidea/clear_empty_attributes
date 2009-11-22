@@ -18,7 +18,7 @@ Install
 =======
 ` script/plugin install git://github.com/collectiveidea/clear_empty_attributes.git `
 OR  
-` sudo gem install clear_empty_attributes -s http://gemcutter.org `
+` sudo gem install clear_empty_attributes `
 
 
 Migration
